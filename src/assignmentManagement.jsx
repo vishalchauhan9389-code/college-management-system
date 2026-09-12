@@ -18,7 +18,7 @@ const AssignmentManagement = () => {
       setLoading(true);
 
       const response = await fetch(
-        "http://localhost:5000/api/assignments"
+        "https://college-management-system-sqtg.onrender.com/api/assignments"
       );
 
       const data = await response.json();
@@ -49,7 +49,7 @@ const AssignmentManagement = () => {
 
     try {
       const response = await fetch(
-        "http://localhost:5000/api/assignments",
+        "https://college-management-system-sqtg.onrender.com/api/assignments",
         {
           method: "POST",
           headers: {

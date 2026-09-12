@@ -18,7 +18,7 @@ const AttendanceManagement = () => {
       setLoading(true);
 
       const response = await fetch(
-        "http://localhost:5000/api/attendance"
+        "https://college-management-system-sqtg.onrender.com/api/attendance"
       );
 
       const data = await response.json();
@@ -36,7 +36,7 @@ const AttendanceManagement = () => {
   const fetchStudents = async () => {
     try {
       const response = await fetch(
-        "http://localhost:5000/api/students"
+        "https://college-management-system-sqtg.onrender.com/api/students"
       );
 
       const data = await response.json();
@@ -66,7 +66,7 @@ const AttendanceManagement = () => {
 
     try {
       const response = await fetch(
-        "http://localhost:5000/api/attendance",
+        "https://college-management-system-sqtg.onrender.com/api/attendance",
         {
           method: "POST",
           headers: {

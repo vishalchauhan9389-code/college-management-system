@@ -21,7 +21,7 @@ const StudentManagement = () => {
       setLoading(true);
 
       const response = await fetch(
-        "http://localhost:5000/api/students"
+        "https://college-management-system-sqtg.onrender.com/api/students"
       );
 
       const data = await response.json();
@@ -52,8 +52,8 @@ const StudentManagement = () => {
 
     try {
       const url = editingId
-        ? `http://localhost:5000/api/students/${editingId}`
-        : "http://localhost:5000/api/students";
+        ? `https://college-management-system-sqtg.onrender.com/api/students/${editingId}`
+        : "https://college-management-system-sqtg.onrender.com/api/students";
 
       const method = editingId ? "PUT" : "POST";
 
@@ -117,7 +117,7 @@ const StudentManagement = () => {
 
     try {
       const response = await fetch(
-        `http://localhost:5000/api/students/${id}`,
+        `https://college-management-system-sqtg.onrender.com/api/students/${id}`,
         {
           method: "DELETE",
         }

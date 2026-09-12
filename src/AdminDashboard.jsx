@@ -72,7 +72,7 @@ const fetchStudents = async () => {
     setLoadingStudents(true);
 
     const response = await fetch(
-      "http://localhost:5000/api/students"
+      "https://college-management-system-sqtg.onrender.com/api/students"
     );
 
     const data = await response.json();
@@ -93,7 +93,7 @@ const addStudent = async (e) => {
     setSavingStudent(true);
 
     const response = await fetch(
-      "http://localhost:5000/api/students",
+      "https://college-management-system-sqtg.onrender.com/api/students",
       {
         method: "POST",
         headers: {
@@ -133,7 +133,7 @@ const fetchTeachers = async () => {
     setLoadingTeachers(true);
 
     const response = await fetch(
-      "http://localhost:5000/api/teachers"
+      "https://college-management-system-sqtg.onrender.com/api/students"
     );
 
     const data = await response.json();
@@ -153,13 +153,16 @@ const addTeacher = async (e) => {
   try {
     setSavingTeacher(true);
 
-    const response = await fetch("http://localhost:5000/api/teachers", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(teacherForm),
-    });
+    const response = await fetch(
+      "https://college-management-system-sqtg.onrender.com/api/teachers",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(teacherForm),
+      }
+    );
 
     const data = await response.json();
 
@@ -175,14 +178,13 @@ const addTeacher = async (e) => {
       });
 
       setShowTeacherForm(false);
-
       fetchTeachers();
     } else {
       alert(data.message);
     }
   } catch (error) {
     console.error("Add teacher error:", error);
-    alert("Teacher could not be added");
+    alert(error.message);
   } finally {
     setSavingTeacher(false);
   }
@@ -192,7 +194,7 @@ const fetchSubjects = async () => {
     setLoadingSubjects(true);
 
     const response = await fetch(
-      "http://localhost:5000/api/subjects"
+      "https://college-management-system-sqtg.onrender.com/api/subjects"
     );
 
     const data = await response.json();
@@ -211,7 +213,7 @@ const fetchAssignments = async () => {
     setLoadingAssignments(true);
 
     const response = await fetch(
-      "http://localhost:5000/api/assignments"
+      "https://college-management-system-sqtg.onrender.com/api/assignments"
     );
 
     const data = await response.json();const addAssignment = async (e) => {
@@ -221,7 +223,7 @@ const fetchAssignments = async () => {
     setSavingAssignment(true);
 
     const response = await fetch(
-      "http://localhost:5000/api/assignments",
+      "https://college-management-system-sqtg.onrender.com/api/assignments",
       {
         method: "POST",
         headers: {
@@ -270,7 +272,7 @@ const fetchMarks = async () => {
     setLoadingMarks(true);
 
     const response = await fetch(
-      "http://localhost:5000/api/marks"
+      "https://college-management-system-sqtg.onrender.com/api/marks"
     );
 
     const data = await response.json();
@@ -291,7 +293,7 @@ const addMarks = async (e) => {
     setSavingMarks(true);
 
     const response = await fetch(
-      "http://localhost:5000/api/marks",
+      "https://college-management-system-sqtg.onrender.com/api/marks",
       {
         method: "POST",
         headers: {
@@ -333,7 +335,7 @@ const addAssignment = async (e) => {
     setSavingAssignment(true);
 
     const response = await fetch(
-      "http://localhost:5000/api/assignments",
+      "https://college-management-system-sqtg.onrender.com/api/assignments",
       {
         method: "POST",
         headers: {
@@ -372,7 +374,7 @@ const fetchAttendance = async () => {
     setLoadingAttendance(true);
 
     const response = await fetch(
-      "http://localhost:5000/api/attendance"
+      "https://college-management-system-sqtg.onrender.com/api/attendance"
     );
 
     const data = await response.json();
@@ -391,7 +393,7 @@ const fetchUsers = async () => {
     setLoadingUsers(true);
 
     const response = await fetch(
-      "http://localhost:5000/api/users"
+      "https://college-management-system-sqtg.onrender.com/api/users"
     );
 
     const data = await response.json();
@@ -411,7 +413,7 @@ const addSubject = async (e) => {
   try {
     setSavingSubject(true);
 
-    const response = await fetch("http://localhost:5000/api/subjects", {
+    const response = await fetch("https://college-management-system-sqtg.onrender.com/api/subjects", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

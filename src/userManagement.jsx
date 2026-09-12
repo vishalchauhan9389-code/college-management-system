@@ -9,7 +9,7 @@ const UserManagement = () => {
     try {
       setLoading(true);
 
-      const response = await fetch("http://localhost:5000/api/users");
+      const response = await fetch("https://college-management-system-sqtg.onrender.com/api/users");
       const data = await response.json();
 
       if (data.success) {

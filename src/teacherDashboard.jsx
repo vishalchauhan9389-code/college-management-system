@@ -307,7 +307,7 @@ useEffect(() => {
   try {
     setLoadingStudents(true);
 
-    const response = await fetch("http://localhost:5000/api/students");
+    const response = await fetch("https://college-management-system-sqtg.onrender.com/api/students");
     const data = await response.json();
 
     if (data.success) {
@@ -321,7 +321,7 @@ useEffect(() => {
 }; 
 const fetchMarks = async () => {
   try {
-    const response = await fetch("http://localhost:5000/api/marks");
+    const response = await fetch("https://college-management-system-sqtg.onrender.com/api/marks");
     const data = await response.json();
 
     if (data.success) {
@@ -344,7 +344,7 @@ const saveMarks = async () => {
     }
 
     const response = await fetch(
-      "http://localhost:5000/api/marks",
+      "https://college-management-system-sqtg.onrender.com/api/marks",
       {
         method: "POST",
         headers: {
@@ -384,7 +384,7 @@ const saveMarks = async () => {
   const fetchAssignments = async () => {
   try {
     
-    const response = await fetch("http://localhost:5000/api/assignments");
+    const response = await fetch("https://college-management-system-sqtg.onrender.com/api/assignments");
     const data = await response.json();
 
     if (data.success) {
@@ -396,7 +396,7 @@ const saveMarks = async () => {
 };
   const addStudent = async () => {
   try {
-    const response = await fetch("http://localhost:5000/api/students", {
+    const response = await fetch("https://college-management-system-sqtg.onrender.com/api/students", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -432,7 +432,7 @@ const saveMarks = async () => {
 const updateStudent = async () => {
   try {
     const response = await fetch(
-      `http://localhost:5000/api/students/${editingStudent.studentId}`,
+      `https://college-management-system-sqtg.onrender.com/api/students/${editingStudent.studentId}`,
       {
         method: "PUT",
         headers: {
@@ -524,7 +524,7 @@ const saveAttendance = async () => {
     for (const student of students) {
       const status = attendanceStatus[student.studentId] || "Absent";
 
-      await fetch("http://localhost:5000/api/attendance", {
+      await fetch("https://college-management-system-sqtg.onrender.com/api/attendance", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -1162,7 +1162,7 @@ if (showAddStudent) {
 
     try {
       const response = await fetch(
-        `http://localhost:5000/api/students/${student.studentId}`,
+        `https://college-management-system-sqtg.onrender.com/api/students/${student.studentId}`,
         {
           method: "DELETE",
         }

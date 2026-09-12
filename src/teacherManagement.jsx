@@ -19,7 +19,7 @@ const TeacherManagement = () => {
       setLoading(true);
 
       const response = await fetch(
-        "http://localhost:5000/api/teachers"
+        "https://college-management-system-sqtg.onrender.com/api/teachers"
       );
 
       const data = await response.json();
@@ -50,7 +50,7 @@ const TeacherManagement = () => {
 
     try {
       const response = await fetch(
-        "http://localhost:5000/api/teachers",
+        "https://college-management-system-sqtg.onrender.com/api/teachers",
         {
           method: "POST",
           headers: {

@@ -18,7 +18,7 @@ const SubjectManagement = () => {
       setLoading(true);
 
       const response = await fetch(
-        "http://localhost:5000/api/subjects"
+        "https://college-management-system-sqtg.onrender.com/api/subjects"
       );
 
       const data = await response.json();
@@ -49,7 +49,7 @@ const SubjectManagement = () => {
 
     try {
       const response = await fetch(
-        "http://localhost:5000/api/subjects",
+        "https://college-management-system-sqtg.onrender.com/api/subjects",
         {
           method: "POST",
           headers: {

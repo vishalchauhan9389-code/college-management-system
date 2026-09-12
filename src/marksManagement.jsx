@@ -19,7 +19,7 @@ const MarksManagement = () => {
       setLoading(true);
 
       const response = await fetch(
-        "http://localhost:5000/api/marks"
+        "https://college-management-system-sqtg.onrender.com/api/marks"
       );
 
       const data = await response.json();
@@ -50,7 +50,7 @@ const MarksManagement = () => {
 
     try {
       const response = await fetch(
-        "http://localhost:5000/api/marks",
+        "https://college-management-system-sqtg.onrender.com/api/marks",
         {
           method: "POST",
           headers: {
