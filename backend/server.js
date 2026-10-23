@@ -5,7 +5,7 @@ const mongoose = require("mongoose");
 const User = require("./models/user");
 
 const app = express();
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 const Student = require("./models/Student");
 const Assignment = require("./models/Assignment");
 const Marks = require("./models/Marks");
